@@ -1,0 +1,26 @@
+App\Entity\LivingPlace:
+  attributes:
+    id:
+      groups: [living_place_read]
+    name:
+      groups: [living_place_read, living_place_post]
+    description:
+      groups: [living_place_read, living_place_post]
+    numberRooms:
+      groups: [living_place_read, living_place_post]
+    city:
+      groups: [living_place_read, living_place_post]
+    province:
+      groups: [living_place_read, living_place_post]
+    postalCode:
+      groups: [living_place_read, living_place_post]
+    address:
+      groups: [living_place_read, living_place_post]
+    coverPhoto:
+      groups: [living_place_read]
+    active:
+      groups: [living_place_read]
+    createdAt:
+        groups: [living_place_read]
+    updatedAt:
+        groups: [living_place_read]

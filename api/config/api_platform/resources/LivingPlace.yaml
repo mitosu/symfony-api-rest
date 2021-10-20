@@ -1,0 +1,18 @@
+App\Entity\LivingPlace:
+  attributes:
+    normalization_context:
+      groups: [living_place_read]
+  collectionOperations:
+    register:
+      method: POST
+      path: /households/register
+      controller: App\Api\Action\LivingPlace\Register
+      denormalization_context:
+        groups: [living_place_post]
+      openapi_context:
+        summary: Register a new Living Place
+    get:
+      method: GET
+  itemOperations:
+    get:
+      method: GET

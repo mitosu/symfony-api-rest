@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping">
+    <entity name="App\Entity\LivingPlace" table="living_place">
+        <id name="id" type="string" length="36" />
+
+        <field name="name" length="100" unique="true">
+            <options>
+                <option name="comment">
+                    The name for identify one living place.
+                </option>
+            </options>
+        </field>
+        <field name="description" length="100" nullable="true"/>
+        <field name="numberRooms" length="5" />
+        <field name="city" length="50" />
+        <field name="province" length="50" />
+        <field name="postalCode" length="10" />
+        <field name="address" length="100" />
+        <field name="coverPhoto" length="100" nullable="true"/>
+        <field name="active" type="boolean" />
+        <field name="createdAt" type="datetime" />
+        <field name="updatedAt" type="datetime" />
+        
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="markAsUpdated"/>
+        </lifecycle-callbacks>
+    </entity>
+</doctrine-mapping>
